@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation in HTML | CodingNepal</title>
+    <link rel="stylesheet" href="styles.css" />
+
+  </head>
+  <body>
+    <form action="submit.html">
+      <h2>Form Validation</h2>
+      <div class="tab" id="tab1">
+        <div>
+          <div class="form-group firstname">
+            <label for="firstname">First Name</label>
+            <input
+              type="text"
+              id="firstname"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <div class="form-group middlename">
+            <label for="middlename">Middle Name:</label>
+            <input
+              type="text"
+              id="middlename"
+              name="middlename"
+              placeholder="Middlename"
+            />
+          </div>
+          <div class="form-group lastname">
+            <label for="lastname">Last Name:</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Lastname"
+            />
+          </div>
+        </div>
+        <div class="parentsname">
+          <div class="form-group grandfathername">
+            <label for="GrandFathername">GrandFather's name:</label>
+            <input
+              type="text"
+              id="GrandFatherName"
+              name="GrandFathername"
+              placeholder="GrandFather name"
+            />
+          </div>
+          <div class="form-group fathername">
+            <label for="Fathername">Father's name:</label>
+            <input
+              type="text"
+              id="FatherName"
+              name="FatherName"
+              placeholder="Father's name"
+            />
+          </div>
+          <div class="form-group mothername">
+            <label for="mothername">Mother's name:</label>
+            <input
+              type="text"
+              id="MotherName"
+              name="MotherName"
+              placeholder="Mother's name"
+            />
+          </div>
+        </div>
+        <div class="form-group date">
+          <label for="date">Birth Date</label>
+          <input type="date" id="date" placeholder="Select your date" />
+        </div>
+        <div class="form-group gender">
+          <label for="Gender">Choose your Gender:</label>
+          <div class="radio-group">
+            <input type="radio" value="male" name="gender" id="male" />
+            <label for="male">Male</label>
+
+            <input type="radio" value="female" name="gender" id="female" />
+            <label for="female">Female</label>
+
+            <input type="radio" value="others" name="gender" id="others" />
+            <label for="others">Others</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="relation">Select your relationship Status:</label>
+          <div class="radio-group">
+            <input type="radio" value="married" name="relation" id="married" />
+            <label for="married">Married</label>
+
+            <input
+              type="radio"
+              value="Unmarried"
+              name="relation"
+              id="unmarried"
+            />
+            <label for="unmarried">Unmarried</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- -----------------------TAB2------------------------ -->
+      <div class="tab" id="tab2">
+        <h1>Address Details</h1>
+        <div class="addressDetails">
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <input
+              type="text"
+              id="country"
+              name="country"
+              placeholder="Nepal"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="province">Select Province</label>
+            <select id="province">
+              <option selected disabled>Select your province</option>
+              <option value="province1">Province 1</option>
+              <option value="province2">Province 2</option>
+              <option value="province3">Province 3</option>
+              <option value="province4">Province 4</option>
+              <option value="province5">Province 5</option>
+              <option value="province6">Province 6</option>
+              <option value="province7">Province 7</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="district">Select District</label>
+            <select id="district">
+              <option value="" selected disabled>Select district</option>
+              <option value="kathmandu">Kathmandu</option>
+              <option value="Bhaktapur">Bhaktapur</option>
+              <option value="Lalitpur">Lalitpur</option>
+              <option value="Surkhet">Surkhet</option>
+              <option value="kavrepalanchok">Kavrepalanchok</option>
+              <option value="Makwanpur">Makwanpur</option>
+              <option value="Chitwan">Chitwan</option>
+              <option value="Dharan">Dharan</option>
+              <option value="Jhapa">Jhapa</option>
+            </select>
+          </div>
+
+          <div class="form-group municipality">
+            <label for="municipality">Municipality</label>
+            <input
+              type="text"
+              id="municipality"
+              name="municipality"
+              placeholder="Municipality"
+            />
+          </div>
+          <div class="form-group">
+            <label for="ward">Ward</label>
+            <input type="text" id="ward" name="ward" placeholder="ward no" />
+          </div>
+        </div>
+      </div>
+
+      <!-- -----------------TAB3--------------------------- -->
+      <div class="tab" id="tab3">
+        <h1>Contact Details</h1>
+        <div class="contactDetails">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="someone@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="text"
+              placeholder="enter Mobile number"
+              id="mobileNumber"
+              name="mobileNumber"
+            />
+          </div>
+          <div class="form-group">
+            <label for="Tel">Telephone Number</label>
+            <input
+              type="text"
+              id="telephoneNumber"
+              name="telephoneNumber"
+              placeholder="tel"
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="navigation">
+        <button type="button" onclick="prevStep()">Previous</button>
+        <button type="button" onclick="nextStep()">Next</button>
+      </div>
+
+      <div class="form-group submit-btn">
+        <button type="submit" >Submit</button>
+      </div>
+    </form>
+
+    <script src="validation.js"></script>
+  </body>
+</html>
